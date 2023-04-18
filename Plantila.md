@@ -24,85 +24,18 @@ composer require symfony/http-kernel
 
 ## 2. Flujo de trabajo de una solicitud
 Para entender como funciona Symfony cuando un usuario accede a la página web, observa el siguiente diagrama:
-```flow
-start=>start: Inicio
-final=>end: Fin
-
-paso1=>operation: El usuario solicita un recurso en un navegador
-paso2=>operation: El navegador envía una solicitud al usuario
-paso3=>operation: Symfony le da a la aplicación un objeto del tipo Request
-paso4=>operation: La aplicación genera un objeto Response
-utilizando los datos del objeto Request 
-paso5=>operation: El servidor devuelve la respuesta al navegador
-paso6=>operation: El navegador muestra el recurso al usuario
-
-start->paso1->paso2->paso3->paso4->paso5->paso6->final
-```
-
-
-### Sequence Diagram
-                    
-```seq
-Andrew->China: Says Hello 
-Note right of China: China thinks\nabout it 
-China-->Andrew: How are you? 
-Andrew->>China: I am good thanks!
-```
-
-
-
-<div id="punto3"></div>
-
-## Punto 3
-Lorem ipsum
-
-
-<div id="anotaciones"></div>
-
-## Anotaciones
-- Anotación 1
-- Anotación 2
-- Anotación 3
-
-> Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
-
 ```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+graph TD
+A(El usuario solicita un recurso en un navegador)
+B(El navegador envía una solicitud al servidor)
+C(Symfony le da a la aplicación un objeto Request)
+D(La aplicación genera un objeto Response utilizando los datos del objeto Request)
+E(El servidor devuelve la respuesta al navegador)
+F(El navegador muestra el recurso al usuario)
 
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
+A --> B;
+B --> C;
+C --> D;
+D --> E;
+E --> F;
 ```
-
-And this will produce a flow chart:
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
-
-- [x] GFM task list 1
-- [x] GFM task list 2
-- [ ] GFM task list 3
-    - [ ] GFM task list 3-1
-    - [ ] GFM task list 3-2
-    - [ ] GFM task list 3-3
-- [ ] GFM task list 4
-    - [ ] GFM task list 4-1
-    - [ ] GFM task list 4-2
