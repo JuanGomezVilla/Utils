@@ -1,0 +1,79 @@
+/* BASE ===================================================================================== */
+
+/* VARIABLES */
+:root {
+    --font-family: "Google Sans Flex", "Segoe UI", Arial;
+    
+    --color-primary: #1a73e8;
+    --color-on-primary: #ffffff;
+    --color-text: #000000;
+
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    
+    --color-link: #1a73e8;
+}
+
+html.dark-theme {
+    --color-primary: #1a73e8;
+    --color-on-primary: #ffffff;
+    --color-text: #ffffff;
+}
+
+/* MAIN ELEMENTS ------------------------------------------------------------------------- */
+* {font-family:var(--font-family);margin:0;padding:0;position:relative;}
+*, *::before, *::after {box-sizing:border-box;}
+html, body {height:100%;color:var(--color-text);}
+p {color:var(--color-text);}
+a {color:var(--color-link);}
+::-moz-selection {color:var(--color-on-primary);background:var(--color-primary);} /* Code for Firefox */
+::selection {color:var(--color-on-primary);background:var(--color-primary)}
+
+/* IMPORTANTE: comenta estas 2 líneas si no vas a utilizar iconos */
+@font-face {font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url(/assets/fonts/MaterialSymbolsOutlined.woff2) format('woff2');}
+.icon, .icon-filled {user-select:none;font-family:'Material Symbols Outlined';font-size:24px;line-height:1;font-weight:normal;font-style:normal;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;font-feature-settings:'liga';-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;}
+.icon-filled {font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24}
+
+/* Colores */
+.error-color {color:var(--error-color) !important;}
+.success-color {color:var(--success-color) !important;}
+
+/* Rows and columns */
+.grid {display:flex;flex-direction:column;}
+.row {display:flex;flex:1;}
+.cell {flex:1;flex-wrap:nowrap;width:100%;}
+/*  */
+
+/* Buttons */
+button {-webkit-tap-highlight-color:transparent;user-select:none;cursor:pointer;color:var(--color-on-primary);background-color:var(--color-primary);}
+button:disabled {cursor:default;}
+
+@media only screen and (max-width: 600px) {
+    .row {flex-direction:column !important;}
+}
+
+
+
+
+/* ========================================================================================*/
+
+/* Contenido personalizado */
+
+:root {
+    --nav-bg: #f0f4f9;
+}
+
+html.dark-theme {
+    --nav-bg: #1e1f20;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    /* Contenido personalizado responsive */
+}
